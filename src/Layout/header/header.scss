@@ -1,0 +1,95 @@
+.header{
+    padding-left: 100px;
+    padding-right: 100px;
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__img{
+        width: 120px;
+        height: 40px;
+    }
+    &__ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 10px;  
+    }
+    &__ul li{
+        // font-size: 14px;
+        // font-weight: 600;
+        background-color: #ffffff;
+            padding: 15px 25px;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    &__ul li:hover{
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    &__ul li:active {
+        background-color: #ff6b6b;
+        transform: scale(0.95);
+        color: #ffffff;
+    }
+   
+   
+    &__binLogo{
+        font-size: 25px;
+            color: #333;
+            cursor: pointer;
+            transition: transform 0.3s, color 0.3s;
+    }
+    &__binLogo:hover{
+        transform: rotate(20deg);
+        color: #ff6b6b;
+    }
+    &__binLogo:active{
+        animation: pulse 0.5s;
+        transform: scale(0.9);
+    }
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    &__bin{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__regLogo{
+        font-size: 23px;
+        margin-right: 10px;
+        color: #333;
+        cursor: pointer;
+        transition: transform 0.3s, color 0.3s;
+    }
+    &__regLogo:hover{
+        color: #ff6b6b;
+    }
+    &__regLogo:active{
+        animation: pulse 0.5s;
+        transform: scale(0.9);
+    }
+    &__logout{
+        font-size: 25px;
+    }
+    &__logout:hover{
+        color: #ff6b6b;
+        cursor: pointer;
+    }
+}
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}

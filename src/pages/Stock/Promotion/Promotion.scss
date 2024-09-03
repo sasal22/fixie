@@ -1,0 +1,54 @@
+.promotion{
+    padding: 40px 100px;
+    h2{
+        padding-bottom: 30px;
+    }
+    &__box {
+        width: 250px;
+        padding: 10px;
+        border: 1px solid #ddd; 
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+        background-color: #fff; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    &__box:hover {
+        transform: scale(1.05); 
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    }
+    &__box__img {
+        margin-top: 7px;
+        margin-bottom: 15px; 
+        width: 225px;
+        border-radius: 8px;
+        transition: transform 0.5s ease;
+    }
+    &__box:hover &__box__img {
+        transform: scale(1.1); 
+    }
+    &__box__name {
+        font-size: 16px; 
+        font-weight: bold; 
+        color: #333;
+        margin-bottom: 10px; 
+        
+    }
+    &__box__name:hover{
+        cursor: pointer;
+        color: #af3030;
+    }
+    &__box__info {
+        font-size: 14px;    
+        color: #666;
+        animation: fadeIn 1s forwards; 
+        animation-delay: 1s;
+    }
+
+
+    &__bigBox{
+        display: flex;
+        justify-content: space-between;
+    }
+}

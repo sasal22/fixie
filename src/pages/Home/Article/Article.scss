@@ -1,0 +1,47 @@
+.article{
+    padding: 0 100px;
+    &__name{
+        font-size: 25px;
+        font-weight: 600;
+    }
+    &__box{
+        margin-top: 30px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius : 6px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+    }
+    &__box__name{
+        font-size: 18px; 
+        font-weight: 600;
+        margin: 10px 0;
+    }
+    &__box__name:hover{
+        color: #840000;
+        cursor: pointer;
+    }
+    &__box__info {
+        font-size: 14px; 
+        color: #555; 
+        margin-bottom: 15px; 
+    }
+    &__box__hashtag{
+        font-size: 16px;     
+        font-weight: bold; 
+        color: #b4b4b4; 
+        text-transform: uppercase; 
+    }
+    &__box__hashtag:hover{
+        cursor: pointer;
+    }
+
+    &__bigBox{
+        display: flex;
+        justify-content: space-between;
+    }
+}

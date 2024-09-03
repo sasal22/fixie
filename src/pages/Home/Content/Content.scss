@@ -1,0 +1,134 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+h2{
+    font-size: 25px;
+    font-weight: 600;
+}
+.content{
+    padding: 0 100px; 
+    p{
+        font-size: 14px;
+    }
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; 
+        background: url('./fixie.jpg') no-repeat center center;
+        background-size: cover; 
+        color: #fff; 
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+    &__box__h2 {
+        font-size: 3rem; 
+        font-weight: bold;
+        margin-bottom: 10px;
+        opacity: 0;
+        animation: fadeIn 1s ease-out forwards; 
+    }
+    &__box__p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: fadeIn 1s ease-out 0.5s forwards; /* Анимация появления с задержкой */
+    }
+    &__box__button {
+        padding: 12px 24px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: black;
+        border: none;
+        cursor: pointer;
+    }
+    &__box__button:hover {
+        background-color: #d43c2d;
+        transform: scale(1.01); 
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+.carousel {
+    padding: 20px 0;
+    .slick-arrow {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .arrow {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        &.slick-next {
+            right: 10px;
+        }
+
+        &.slick-prev {
+            left: 10px;
+        }
+
+        &.slick-prev .arrow {
+            transform: rotate(180deg);
+        }
+    }
+    
+    .slick-slide .carousel__card {
+      
+        box-sizing: border-box;
+    }
+    &__card {
+        padding: 10px;
+        text-align: center;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        
+    }
+    &__card:hover {
+        transform: scale(1.05); 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+        cursor: pointer;
+    }
+    &__card__img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    &__card__info {
+        margin-top: 10px;
+    }
+    &__card__title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+    }
+    &__card__price {
+        font-size: 16px;
+        color: #666;
+    }
+}
